@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <!-- Cho phép HTTPS production + HTTP khi test local/emulator -->
-    <base-config cleartextTrafficPermitted="true">
+    <!-- App gọi HTTPS MonsterASP: https://forestryresourceplanning.runasp.net -->
+    <base-config cleartextTrafficPermitted="false">
         <trust-anchors>
             <certificates src="system" />
         </trust-anchors>

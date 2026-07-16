@@ -19,11 +19,11 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        // Deployed API — đổi thành http://10.0.2.2:PORT/ khi chạy backend local trên emulator
+        // FRPAM Deploy (MonsterASP) — không dùng API local
         buildConfigField(
             "String",
             "BASE_URL",
-            "\"http://forestryresourceplanning.runasp.net/\""
+            "\"https://forestryresourceplanning.runasp.net/\""
         )
     }
 
