@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FRPAM Mobile</string>
+
+    <string name="brand_name">FRPAM System</string>
+    <string name="brand_mission">Optimizing our forests through data-driven planning. Our mission is to balance ecological health with sustainable industrial efficiency through advanced spatial intelligence.</string>
+    <string name="brand_efficiency_label">EFFICIENCY</string>
+    <string name="brand_efficiency_value">+24% resource utilization</string>
+    <string name="brand_impact_label">IMPACT</string>
+    <string name="brand_impact_value">Carbon footprint reduction</string>
+
+    <string name="sign_in_title">Sign In</string>
+    <string name="sign_in_subtitle">Enter your credentials to access the management portal.</string>
+
+    <string name="label_email">Email or username</string>
+    <string name="hint_email">name@company.com</string>
+    <string name="label_password">Password</string>
+    <string name="hint_password">Enter your password</string>
+
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login_button">Login →</string>
+
+    <string name="authorized_notice">AUTHORIZED PERSONNEL ONLY. ACCESS IS MONITORED FOR ENVIRONMENTAL COMPLIANCE.</string>
+    <string name="system_status">System Status</string>
+    <string name="technical_support">Technical Support</string>
+    <string name="copyright">© 2026 Forestry Systems Inc. All rights reserved.</string>
+
+    <string name="error_empty_credentials">Please enter email/username and password.</string>
+    <string name="error_login_failed">Login failed. Please check your credentials.</string>
+    <string name="forgot_password_coming_soon">Forgot password will be available soon.</string>
+    <string name="login_success">Welcome, %1$s</string>
+
+    <string name="home_title">Home</string>
+    <string name="home_welcome">Welcome back</string>
+    <string name="logout">Logout</string>
+    <string name="toggle_password_visibility">Toggle password visibility</string>
+</resources>

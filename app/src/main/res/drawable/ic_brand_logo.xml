@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Rounded square background -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M10,4h28c3.3,0 6,2.7 6,6v28c0,3.3 -2.7,6 -6,6h-28c-3.3,0 -6,-2.7 -6,-6v-28c0,-3.3 2.7,-6 6,-6z" />
+    <!-- Stylized tree / upward arrow mark -->
+    <path
+        android:fillColor="#1B5E3B"
+        android:pathData="M24,10 L34,28 H28 V36 H20 V28 H14 Z" />
+</vector>
