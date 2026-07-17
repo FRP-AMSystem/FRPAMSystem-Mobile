@@ -12,7 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.frpam_mobile.R
 import com.example.frpam_mobile.data.prefs.SessionManager
 import com.example.frpam_mobile.databinding.ActivityLoginBinding
-import com.example.frpam_mobile.ui.home.HomeActivity
+import com.example.frpam_mobile.ui.main.MainActivity
 import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
@@ -146,7 +146,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun navigateToHome() {
-        startActivity(Intent(this, HomeActivity::class.java))
+        startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
 }

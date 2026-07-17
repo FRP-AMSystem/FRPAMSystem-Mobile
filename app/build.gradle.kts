@@ -19,11 +19,12 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
-        // FRPAM Deploy (MonsterASP) — không dùng API local
+        // FRPAM Deploy (MonsterASP) — không dùng API local.
+        // Site MonsterASP chưa bật SSL (HTTPS bị reset) nên tạm dùng HTTP.
         buildConfigField(
             "String",
             "BASE_URL",
-            "\"https://forestryresourceplanning.runasp.net/\""
+            "\"http://forestryresourceplanning.runasp.net/\""
         )
     }
 
@@ -58,6 +59,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
 

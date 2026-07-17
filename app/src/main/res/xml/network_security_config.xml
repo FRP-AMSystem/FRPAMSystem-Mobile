@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <!-- App gọi HTTPS MonsterASP: https://forestryresourceplanning.runasp.net -->
+    <!-- Mặc định chặn HTTP thường -->
     <base-config cleartextTrafficPermitted="false">
         <trust-anchors>
             <certificates src="system" />
         </trust-anchors>
     </base-config>
+
+    <!-- MonsterASP chưa bật SSL cho site nên cho phép HTTP riêng domain này.
+         Khi nào bật được SSL trên panel MonsterASP thì đổi BASE_URL về https và xóa block này. -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">runasp.net</domain>
+    </domain-config>
 </network-security-config>

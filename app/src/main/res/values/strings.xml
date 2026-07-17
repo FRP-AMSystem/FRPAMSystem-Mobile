@@ -32,7 +32,19 @@
     <string name="login_success">Welcome, %1$s</string>
 
     <string name="home_title">Home</string>
-    <string name="home_welcome">Welcome back</string>
+    <string name="inbox_title">Notifications</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_inbox">Inbox</string>
+    <string name="my_work">My Work</string>
+    <string name="menu_issue">Issue</string>
+    <string name="menu_request_equipment">Request Equipment</string>
+    <string name="menu_assigned_experiment">Assigned Experiment</string>
+    <string name="menu_schedule">Schedule</string>
+    <string name="feature_coming_soon">This feature is coming soon.</string>
+    <string name="profile_coming_soon">Profile is coming soon.</string>
     <string name="logout">Logout</string>
+    <string name="avatar">User avatar</string>
+    <string name="empty_notifications">No notifications yet.</string>
+    <string name="mark_all_read">Mark all as read</string>
     <string name="toggle_password_visibility">Toggle password visibility</string>
 </resources>
