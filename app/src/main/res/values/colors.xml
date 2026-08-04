@@ -16,4 +16,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="error_red">#DC2626</color>
+
+    <!-- Calendar event colors -->
+    <color name="cal_event_teal">#0D9488</color>
+    <color name="cal_event_blue">#2563EB</color>
+    <color name="cal_event_purple">#7C3AED</color>
+    <color name="cal_event_orange">#EA580C</color>
+    <color name="cal_event_green">#16A34A</color>
+    <color name="cal_today_bg">#1B5E3B</color>
+    <color name="cal_day_outside">#D1D5DB</color>
 </resources>

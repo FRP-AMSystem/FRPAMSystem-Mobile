@@ -46,5 +46,23 @@
     <string name="avatar">User avatar</string>
     <string name="empty_notifications">No notifications yet.</string>
     <string name="mark_all_read">Mark all as read</string>
+    <string name="schedule_title">Schedule</string>
+    <string name="schedule_today">Today</string>
+    <string name="schedule_prev_month">Previous month</string>
+    <string name="schedule_next_month">Next month</string>
+    <string name="schedule_no_events">No experiments on this day.</string>
+    <string name="schedule_experiment">Experiment</string>
+    <string name="schedule_time_range">%1$s – %2$s</string>
+    <string name="schedule_status">Status</string>
+    <string name="schedule_description">Description</string>
+    <string name="schedule_more_events">+%1$d more</string>
+    <string name="weekday_mon">Mon</string>
+    <string name="weekday_tue">Tue</string>
+    <string name="weekday_wed">Wed</string>
+    <string name="weekday_thu">Thu</string>
+    <string name="weekday_fri">Fri</string>
+    <string name="weekday_sat">Sat</string>
+    <string name="weekday_sun">Sun</string>
+    <string name="back">Back</string>
     <string name="toggle_password_visibility">Toggle password visibility</string>
 </resources>
