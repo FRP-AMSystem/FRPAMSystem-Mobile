@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.frpam_mobile.R
+import com.example.frpam_mobile.data.prefs.SessionManager
 import com.example.frpam_mobile.databinding.FragmentHomeBinding
 import com.example.frpam_mobile.databinding.ItemWorkMenuBinding
 import com.example.frpam_mobile.ui.schedule.ScheduleActivity
@@ -16,6 +17,8 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var sessionManager: SessionManager
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,6 +32,8 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        sessionManager = SessionManager(requireContext())
+
         bindRow(binding.rowIssue, R.string.menu_issue, R.drawable.ic_issue, R.drawable.bg_icon_green)
         bindRow(binding.rowRequestEquipment, R.string.menu_request_equipment, R.drawable.ic_equipment, R.drawable.bg_icon_blue)
         bindRow(binding.rowAssignedExperiment, R.string.menu_assigned_experiment, R.drawable.ic_experiment, R.drawable.bg_icon_purple)
@@ -38,7 +43,11 @@ class HomeFragment : Fragment() {
             iconRes = R.drawable.ic_schedule,
             iconBgRes = R.drawable.bg_icon_orange,
             onClick = {
-                startActivity(Intent(requireContext(), ScheduleActivity::class.java))
+                if (sessionManager.canAccessSchedule()) {
+                    startActivity(Intent(requireContext(), ScheduleActivity::class.java))
+                } else {
+                    Toast.makeText(requireContext(), R.string.schedule_not_allowed, Toast.LENGTH_SHORT).show()
+                }
             }
         )
     }

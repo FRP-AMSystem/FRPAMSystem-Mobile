@@ -107,7 +107,19 @@ class EventDetailBottomSheet : BottomSheetDialogFragment() {
         }
         binding.tvDetailExperiment.text = item.experimentName
         binding.tvDetailStatus.text = item.status
-        binding.tvDetailDescription.text = item.description.orEmpty()
+        binding.tvDetailDescription.text = buildString {
+            if (!item.phaseName.isNullOrBlank()) {
+                append("Phase: ")
+                append(item.phaseName)
+                append("\n\n")
+            }
+            append(item.description.orEmpty())
+            if (!item.notes.isNullOrBlank()) {
+                if (isNotEmpty()) append("\n\n")
+                append("Notes: ")
+                append(item.notes)
+            }
+        }
 
         val colorRes = ScheduleColorHelper.eventColor(item.colorIndex)
         binding.viewEventColor.setBackgroundColor(

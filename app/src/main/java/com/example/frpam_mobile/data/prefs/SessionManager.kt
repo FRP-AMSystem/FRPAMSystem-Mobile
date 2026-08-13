@@ -19,6 +19,11 @@ class SessionManager(context: Context) {
             putString(KEY_EMAIL, login.email)
             putInt(KEY_ROLE_ID, login.roleId)
             putString(KEY_ROLE_NAME, login.roleName)
+            if (login.humanResourceId != null) {
+                putInt(KEY_HUMAN_RESOURCE_ID, login.humanResourceId)
+            } else {
+                remove(KEY_HUMAN_RESOURCE_ID)
+            }
             putBoolean(KEY_REMEMBER_ME, rememberMe)
             putBoolean(KEY_IS_LOGGED_IN, true)
         }
@@ -61,6 +66,15 @@ class SessionManager(context: Context) {
 
     fun getRoleName(): String = prefs.getString(KEY_ROLE_NAME, "") ?: ""
 
+    fun getHumanResourceId(): Int? =
+        if (prefs.contains(KEY_HUMAN_RESOURCE_ID)) prefs.getInt(KEY_HUMAN_RESOURCE_ID, -1) else null
+
+    fun canAccessSchedule(): Boolean {
+        val role = getRoleName()
+        return role.equals("Researcher", ignoreCase = true) ||
+            role.equals("Student", ignoreCase = true)
+    }
+
     fun getSavedEmail(): String = prefs.getString(KEY_SAVED_EMAIL, "") ?: ""
 
     companion object {
@@ -72,6 +86,7 @@ class SessionManager(context: Context) {
         private const val KEY_EMAIL = "email"
         private const val KEY_ROLE_ID = "role_id"
         private const val KEY_ROLE_NAME = "role_name"
+        private const val KEY_HUMAN_RESOURCE_ID = "human_resource_id"
         private const val KEY_REMEMBER_ME = "remember_me"
         private const val KEY_IS_LOGGED_IN = "is_logged_in"
         private const val KEY_SAVED_EMAIL = "saved_email"

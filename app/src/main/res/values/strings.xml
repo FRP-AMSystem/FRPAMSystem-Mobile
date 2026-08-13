@@ -64,5 +64,7 @@
     <string name="weekday_sat">Sat</string>
     <string name="weekday_sun">Sun</string>
     <string name="back">Back</string>
+    <string name="schedule_not_allowed">Schedule is only available for Researcher and Student.</string>
+    <string name="schedule_load_failed">Failed to load schedules.</string>
     <string name="toggle_password_visibility">Toggle password visibility</string>
 </resources>

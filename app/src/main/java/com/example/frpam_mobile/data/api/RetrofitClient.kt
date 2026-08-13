@@ -55,4 +55,6 @@ object RetrofitClient {
     val authApi: AuthApi = retrofit.create(AuthApi::class.java)
 
     val notificationApi: NotificationApi = retrofit.create(NotificationApi::class.java)
+
+    val scheduleApi: ScheduleApi = retrofit.create(ScheduleApi::class.java)
 }
