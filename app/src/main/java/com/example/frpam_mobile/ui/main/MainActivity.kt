@@ -9,6 +9,8 @@ import com.example.frpam_mobile.R
 import com.example.frpam_mobile.data.prefs.SessionManager
 import com.example.frpam_mobile.databinding.ActivityMainBinding
 import com.example.frpam_mobile.ui.login.LoginActivity
+import com.example.frpam_mobile.ui.profile.ProfileActivity
+import com.example.frpam_mobile.util.NameUtils
 
 class MainActivity : AppCompatActivity() {
 
@@ -57,9 +59,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupAvatar() {
-        binding.ivAvatar.setOnClickListener { view ->
+        binding.tvAvatarInitial.text = NameUtils.getNameInitial(sessionManager.getFullName())
+
+        binding.tvAvatarInitial.setOnClickListener { view ->
             PopupMenu(this, view).apply {
                 menu.add(sessionManager.getFullName()).isEnabled = false
+                menu.add(getString(R.string.profile_title)).setOnMenuItemClickListener {
+                    startActivity(Intent(this@MainActivity, ProfileActivity::class.java))
+                    true
+                }
                 menu.add(getString(R.string.logout)).setOnMenuItemClickListener {
                     sessionManager.clearSession()
                     goToLogin()

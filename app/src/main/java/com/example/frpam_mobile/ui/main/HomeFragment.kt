@@ -11,6 +11,7 @@ import com.example.frpam_mobile.R
 import com.example.frpam_mobile.data.prefs.SessionManager
 import com.example.frpam_mobile.databinding.FragmentHomeBinding
 import com.example.frpam_mobile.databinding.ItemWorkMenuBinding
+import com.example.frpam_mobile.ui.assigned.AssignedExperimentActivity
 import com.example.frpam_mobile.ui.schedule.ScheduleActivity
 
 class HomeFragment : Fragment() {
@@ -36,7 +37,15 @@ class HomeFragment : Fragment() {
 
         bindRow(binding.rowIssue, R.string.menu_issue, R.drawable.ic_issue, R.drawable.bg_icon_green)
         bindRow(binding.rowRequestEquipment, R.string.menu_request_equipment, R.drawable.ic_equipment, R.drawable.bg_icon_blue)
-        bindRow(binding.rowAssignedExperiment, R.string.menu_assigned_experiment, R.drawable.ic_experiment, R.drawable.bg_icon_purple)
+        bindRow(
+            row = binding.rowAssignedExperiment,
+            titleRes = R.string.menu_assigned_experiment,
+            iconRes = R.drawable.ic_experiment,
+            iconBgRes = R.drawable.bg_icon_purple,
+            onClick = {
+                startActivity(Intent(requireContext(), AssignedExperimentActivity::class.java))
+            }
+        )
         bindRow(
             row = binding.rowSchedule,
             titleRes = R.string.menu_schedule,

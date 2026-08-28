@@ -32,13 +32,20 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/ivAvatar"
+        <TextView
+            android:id="@+id/tvAvatarInitial"
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/bg_avatar_circle"
+            android:clickable="true"
             android:contentDescription="@string/avatar"
-            android:src="@drawable/ic_avatar_placeholder" />
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="A" />
     </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView

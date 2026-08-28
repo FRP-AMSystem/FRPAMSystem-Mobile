@@ -41,7 +41,10 @@
     <string name="menu_assigned_experiment">Assigned Experiment</string>
     <string name="menu_schedule">Schedule</string>
     <string name="feature_coming_soon">This feature is coming soon.</string>
-    <string name="profile_coming_soon">Profile is coming soon.</string>
+    <string name="profile_title">Profile</string>
+    <string name="profile_username">Username</string>
+    <string name="profile_email">Email</string>
+    <string name="back">Back</string>
     <string name="logout">Logout</string>
     <string name="avatar">User avatar</string>
     <string name="empty_notifications">No notifications yet.</string>
@@ -63,7 +66,13 @@
     <string name="weekday_fri">Fri</string>
     <string name="weekday_sat">Sat</string>
     <string name="weekday_sun">Sun</string>
-    <string name="back">Back</string>
+    <string name="assigned_experiment_title">Assigned Experiment</string>
+    <string name="assigned_experiment_empty">No experiment assignments yet.</string>
+    <string name="assigned_experiment_phase">Phase</string>
+    <string name="assigned_experiment_role">Role</string>
+    <string name="assigned_experiment_skill">Required skill</string>
+    <string name="assigned_experiment_working_hours">Working hours</string>
+    <string name="assigned_experiment_note">Note</string>
     <string name="schedule_not_allowed">Schedule is only available for Researcher and Student.</string>
     <string name="schedule_load_failed">Failed to load schedules.</string>
     <string name="toggle_password_visibility">Toggle password visibility</string>

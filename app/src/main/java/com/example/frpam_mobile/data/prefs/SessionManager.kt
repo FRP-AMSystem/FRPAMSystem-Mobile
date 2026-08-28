@@ -62,6 +62,8 @@ class SessionManager(context: Context) {
 
     fun getFullName(): String = prefs.getString(KEY_FULL_NAME, "") ?: ""
 
+    fun getUsername(): String = prefs.getString(KEY_USERNAME, "") ?: ""
+
     fun getEmail(): String = prefs.getString(KEY_EMAIL, "") ?: ""
 
     fun getRoleName(): String = prefs.getString(KEY_ROLE_NAME, "") ?: ""

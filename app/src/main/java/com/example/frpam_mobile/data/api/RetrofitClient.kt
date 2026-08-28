@@ -57,4 +57,8 @@ object RetrofitClient {
     val notificationApi: NotificationApi = retrofit.create(NotificationApi::class.java)
 
     val scheduleApi: ScheduleApi = retrofit.create(ScheduleApi::class.java)
+
+    val userApi: UserApi = retrofit.create(UserApi::class.java)
+
+    val allocationHumanApi: AllocationHumanApi = retrofit.create(AllocationHumanApi::class.java)
 }
