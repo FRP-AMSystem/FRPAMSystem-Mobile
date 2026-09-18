@@ -12,6 +12,7 @@ import com.example.frpam_mobile.data.prefs.SessionManager
 import com.example.frpam_mobile.databinding.FragmentHomeBinding
 import com.example.frpam_mobile.databinding.ItemWorkMenuBinding
 import com.example.frpam_mobile.ui.assigned.AssignedExperimentActivity
+import com.example.frpam_mobile.ui.equipment.RequestEquipmentActivity
 import com.example.frpam_mobile.ui.schedule.ScheduleActivity
 
 class HomeFragment : Fragment() {
@@ -36,7 +37,20 @@ class HomeFragment : Fragment() {
         sessionManager = SessionManager(requireContext())
 
         bindRow(binding.rowIssue, R.string.menu_issue, R.drawable.ic_issue, R.drawable.bg_icon_green)
-        bindRow(binding.rowRequestEquipment, R.string.menu_request_equipment, R.drawable.ic_equipment, R.drawable.bg_icon_blue)
+        val canRequestEquipment = sessionManager.canAccessRequestEquipment()
+        binding.groupRequestEquipment.visibility =
+            if (canRequestEquipment) View.VISIBLE else View.GONE
+        if (canRequestEquipment) {
+            bindRow(
+                row = binding.rowRequestEquipment,
+                titleRes = R.string.menu_request_equipment,
+                iconRes = R.drawable.ic_equipment,
+                iconBgRes = R.drawable.bg_icon_blue,
+                onClick = {
+                    startActivity(Intent(requireContext(), RequestEquipmentActivity::class.java))
+                }
+            )
+        }
         bindRow(
             row = binding.rowAssignedExperiment,
             titleRes = R.string.menu_assigned_experiment,

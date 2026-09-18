@@ -61,4 +61,10 @@ object RetrofitClient {
     val userApi: UserApi = retrofit.create(UserApi::class.java)
 
     val allocationHumanApi: AllocationHumanApi = retrofit.create(AllocationHumanApi::class.java)
+
+    val allocationEquipmentApi: AllocationEquipmentApi = retrofit.create(AllocationEquipmentApi::class.java)
+
+    val equipmentHandoverApi: EquipmentHandoverApi = retrofit.create(EquipmentHandoverApi::class.java)
+
+    val equipmentReturnApi: EquipmentReturnApi = retrofit.create(EquipmentReturnApi::class.java)
 }

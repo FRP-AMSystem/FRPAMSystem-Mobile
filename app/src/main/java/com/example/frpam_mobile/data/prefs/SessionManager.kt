@@ -77,6 +77,14 @@ class SessionManager(context: Context) {
             role.equals("Student", ignoreCase = true)
     }
 
+    fun canAccessRequestEquipment(): Boolean {
+        val role = getRoleName()
+        return role.equals("Researcher", ignoreCase = true) ||
+            role.equals("Seasonal", ignoreCase = true) ||
+            role.equals("Technician", ignoreCase = true) ||
+            role.equals("Student", ignoreCase = true)
+    }
+
     fun getSavedEmail(): String = prefs.getString(KEY_SAVED_EMAIL, "") ?: ""
 
     companion object {

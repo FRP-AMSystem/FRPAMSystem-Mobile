@@ -38,15 +38,22 @@
                 android:layout_marginStart="70dp"
                 android:background="@color/border_input" />
 
-            <include
-                android:id="@+id/rowRequestEquipment"
-                layout="@layout/item_work_menu" />
-
-            <View
+            <LinearLayout
+                android:id="@+id/groupRequestEquipment"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginStart="70dp"
-                android:background="@color/border_input" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/rowRequestEquipment"
+                    layout="@layout/item_work_menu" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="70dp"
+                    android:background="@color/border_input" />
+            </LinearLayout>
 
             <include
                 android:id="@+id/rowAssignedExperiment"
